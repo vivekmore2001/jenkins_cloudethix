@@ -2,8 +2,8 @@ pipeline {
     agent any 
     environment {
         registryURI = "https://registry.hub.docker.com/"
-        registry = "teamcloudethix/cloudethix-sample-nginx"
-        registryCredential = '02_docker_hub_creds'
+        registry = "vivekmore5292/cdexjenkins"
+        registryCredential = 'docker_hub_creds'
         }
 stages {
         stage('Building image from project dir') {
