@@ -8,7 +8,7 @@ pipeline {
             steps {
                 script {
                     def app = docker.build("latest")
-                    docker.withRegistry('https://registry.hub.docker.com/vivekmore5292/dev', 'Docker-Hub-Cred-Dev') {
+                    docker.withRegistry('https://registry.hub.docker.com/vivekmore5292/dev', 'Docker') {
                     app.push()
                     }
                 }
@@ -21,7 +21,7 @@ pipeline {
             steps {
                 script {
                     def app = docker.build("vivekmore/qa:latest")
-                    docker.withRegistry('https://registry.hub.docker.com/vivekmore5292/qa', 'DOCKER-CRED-QA') {
+                    docker.withRegistry('https://registry.hub.docker.com/vivekmore5292/qa', 'Docker') {
                         app.push()
                     }
                 }
